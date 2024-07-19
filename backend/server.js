@@ -8,12 +8,20 @@ import fetchSuppliers from "./routes/suppliers.js";
 import { fetchRecentOrders, fetchRecentShipments } from "./routes/recentData.js";
 
 import addOrder from "./routes/addOrder.js";
+import addSupplier from "./routes/addSupplier.js";
+import addShipment from "./routes/addShipment.js";
 
 const server = http.createServer((req, res) => {
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    if (req.method === 'OPTIONS') {
+        res.writeHead(204);
+        res.end();
+        return;
+    }
 
     const parsedUrl = url.parse(req.url, true);
     const pathname = parsedUrl.pathname;
@@ -42,6 +50,24 @@ const server = http.createServer((req, res) => {
         req.on('end', () => {
             req.body = JSON.parse(body);
             addOrder(req, res);
+        });
+    } else if (pathname === "/suppliers" && req.method === "POST") {
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            req.body = JSON.parse(body);
+            addSupplier(req, res);
+        });
+    } else if (pathname === "/shipments" && req.method === "POST") {
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString();
+        });
+        req.on('end', () => {
+            req.body = JSON.parse(body);
+            addShipment(req, res);
         });
     } else {
         res.writeHead(404, { "Content-Type": "text/html" });

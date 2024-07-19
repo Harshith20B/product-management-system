@@ -12,7 +12,7 @@
   "license": "ISC",
   "description": "Product Management System",
   "dependencies": {
-    "mysql": "^2.18.1"
+    "mysql2": "^3.10.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

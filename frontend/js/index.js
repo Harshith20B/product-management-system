@@ -5,6 +5,8 @@ import fetchShipments from './ajax/shipments.js';
 import fetchSuppliers from './ajax/suppliers.js';
 
 import submitOrder from './ajax/submitOrder.js';
+import submitSupplier from './ajax/submitSupplier.js';
+import submitShipment from './ajax/submitShipment.js';
 
 $(document).ready(function() {
     $('.fetchCustomers').on('click', fetchCustomers);
@@ -14,4 +16,6 @@ $(document).ready(function() {
     $('.fetchSuppliers').on('click', fetchSuppliers);
 
     $('#order-form').on("submit", submitOrder);
+    $('#supplier-form').on("submit", submitSupplier);
+    $('#shipment-form').on("submit", submitShipment);
 });

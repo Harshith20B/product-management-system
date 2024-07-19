@@ -1,3 +1,5 @@
+import db from "../database/db.js";
+
 function addOrder(req, res) {
     const { order_date, order_time, delivery_date, quantity_ordered, total_amount, shipment_id, supplier_id, customer_id } = req.body;
 

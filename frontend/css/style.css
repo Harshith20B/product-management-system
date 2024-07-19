@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-
     background-image: url('../../background.jpeg');
     background-attachment: fixed;
     background-size: cover;
@@ -19,13 +18,13 @@ body {
 header {
     background-color: #007BFF;
     color: white;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 4em;
+    font-size: 3em; /* Reduced font size */
     font-family: 'JFont';
 }
 
@@ -41,13 +40,13 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Reduced margin */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em; /* Reduced font size */
 }
 
 nav ul li a:hover {
@@ -56,30 +55,31 @@ nav ul li a:hover {
 
 .metrics {
     background-size: cover;
-    padding: 40px 20px;
+    padding: 30px 15px; /* Reduced padding */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px; /* Reduced margin-bottom */
 }
 
 .metric-box {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     margin: 10px;
     text-align: center;
-    width: 30%;
+    width: 28%; /* Adjusted width */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .metric-box h2 {
     margin-bottom: 10px;
     color: #007BFF;
+    font-size: 1.5em; /* Reduced font size */
 }
 
 .metric-box p {
-    font-size: 2em;
+    font-size: 1.8em; /* Reduced font size */
     margin: 0;
 }
 
@@ -91,20 +91,20 @@ nav ul li a:hover {
 
 .content-box {
     background-color: white;
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    max-width: 600px;
+    width: 70%; /* Adjusted width */
+    max-width: 500px; /* Reduced max-width */
     margin-bottom: 20px;
 }
 
 .content-box h2 {
     text-align: center;
     color: #007BFF;
+    font-size: 1.8em; /* Reduced font size */
 }
 
-/* Styling for list items in recent orders and shipments */
 .recent-data ul li {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -120,7 +120,6 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Additional styling for details within list items */
 .recent-data ul li .details {
     font-size: 0.9rem;
     color: #333;
@@ -130,14 +129,13 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* Styling for the add-section divs */
 .add-section {
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin: 1rem auto;
     padding: 1rem;
-    max-width: 800px;
+    max-width: 600px; /* Reduced max-width */
 }
 
 .add-section h2 {
@@ -190,22 +188,19 @@ form button:hover {
     background-color: #218838;
 }
 
-/* Hidden class to hide forms initially */
 .hidden {
     display: none;
 }
 
-/* General container styling for all entities */
 .entity-container {
     background-color: #f4f4f9;
     border-radius: 8px;
     padding: 1rem;
-    max-width: 1200px;
+    max-width: 1000px; /* Reduced max-width */
     margin: 2rem auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
 .entity-header {
     text-align: center;
     margin-bottom: 1rem;
@@ -213,11 +208,10 @@ form button:hover {
 
 .entity-header h2 {
     color: #333;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Reduced font size */
     margin: 0;
 }
 
-/* Styling for each entity card */
 .entity-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -234,7 +228,7 @@ form button:hover {
 
 .entity-card h3 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reduced font size */
     color: #333;
 }
 
@@ -243,7 +237,6 @@ form button:hover {
     color: #555;
 }
 
-/* Styling for individual entity details */
 .entity-card .detail {
     margin-bottom: 0.5rem;
 }
@@ -256,16 +249,4 @@ form button:hover {
 .entity-card .detail span {
     margin-left: 0.5rem;
     color: #666;
-}
-
-@media (max-width: 768px) {
-    .metric-box {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .metric-box {
-        width: 100%;
-    }
 }
